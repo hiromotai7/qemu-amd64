@@ -1,8 +1,5 @@
 #!/bin/bash
 
-create_vhdd() {
-    qemu-img create -f qcow2 vhdd.qcow2 4G
-}
 
 sudo tunctl -t tap0 -g netdev
 
