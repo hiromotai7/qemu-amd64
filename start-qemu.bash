@@ -7,6 +7,7 @@ sudo tunctl -t tap0 -g netdev
 
 qemu-system-x86_64 \
     -nodefaults \
+    -acpitable file=./my-msdm.bin \
     -readconfig ${CFG} \
     -monitor stdio -S
 
