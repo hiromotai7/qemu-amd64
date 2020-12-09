@@ -1,7 +1,7 @@
 #!/bin/bash
 
-CFG=qemu-pcie-emulated-graphic.cfg
-#CFG=qemu-pcie-virtio-graphic.cfg
+#CFG=qemu-pcie-emulated-graphic.cfg
+CFG=qemu-pcie-virtio-graphic.cfg
 
 #UPDATE_CONFIG="-writeconfig qemu-dirty.cfg"
 
