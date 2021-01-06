@@ -1,9 +1,12 @@
 #!/bin/bash
 
+SCRIPT=$(readlink -f $0)
+cd ${SCRIPT%/*}
+
 #CFG=qemu-pcie-emulated-graphic.cfg
 CFG=qemu-pcie-virtio-graphic.cfg
 
-#UPDATE_CONFIG="-writeconfig qemu-dirty.cfg"
+UPDATE_CONFIG="-writeconfig qemu-dirty.cfg"
 
 sudo tunctl -t tap0 -g netdev
 
@@ -12,6 +15,6 @@ qemu-system-x86_64 \
     -acpitable file=./my-msdm.bin \
     -readconfig ${CFG} \
     $UPDATE_CONFIG \
-    -monitor stdio -S
+    -monitor stdio -S $*
 
 sudo tunctl -d tap0
