@@ -15,7 +15,7 @@ SNAPSHOT="-snapshot"
 ## (qemu) savevm latest
 #LOADVM="-loadvm latest"
 
-UPDATE_CONFIG="-writeconfig qemu-dirty.cfg"
+#UPDATE_CONFIG="-writeconfig qemu-dirty.cfg"
 
 [ -n "$SNAPSHOT" ] && echo "SNAPSHOT MODE"
 echo "please start rdesktop after 5sec"
